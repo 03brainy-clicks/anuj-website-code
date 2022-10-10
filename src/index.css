@@ -1,0 +1,234 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite; /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
+  animation: bg-scrolling-reverse 1s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+body::before {
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #6155d7;
+  --back-blue: #2a337fd2;
+  --black: #0a0a0b;
+  --grey: #55565a;
+  --white: #fff;
+}
+
+.color-grey {
+  color: var(--grey);
+}
+
+.color-blue {
+  color: var(--blue);
+}
+
+.color-white {
+  color: white;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.red {
+  border: solid 1px red;
+}
+
+.section-heading {
+  padding: 0px 0px 7px;
+  border-bottom: solid 0.2rem var(--white);
+}
+
+.typed-cursor {
+  opacity: 1;
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+  animation: typedjsBlink 0.7s infinite;
+}
+
+@keyframes typedjsBlink {
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes typedjsBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.typed-fade-out {
+  opacity: 0;
+  transition: opacity 0.25s;
+  -webkit-animation: 0;
+  animation: 0;
+}
+
+nav {
+  z-index: 100;
+}
+
+.navigation h5 {
+  margin: 0px;
+  padding: 0px;
+}
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+.navigation a:hover {
+  color: rgb(208, 208, 208);
+}
+.navigation .navbar-back {
+  background-color: var(--blue);
+}
+
+.hero-section .hero {
+  width: 100%;
+}
+.hero-section .hero-text {
+  font-size: 2rem;
+}
+.hero-section .hero-image img {
+  width: 100%;
+}
+.hero-section .resume-button {
+  background-color: var(--blue);
+  color: white;
+}
+
+.about-me {
+  background-color: var(--blue);
+  color: white;
+}
+.about-me .row {
+  height: 100%;
+}
+.about-me .about-back {
+  margin: 0px;
+  padding: 0px;
+}
+.about-me .about-text {
+  font-size: 1.1rem;
+}
+
+#education {
+  background-color: rgba(255, 255, 255, 0.636);
+}
+
+#project {
+  background-color: var(--blue);
+}
+#project h2 {
+  color: white;
+}
+#project .carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+#project .project-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.proj-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: black;
+}
+.proj-card img {
+  border-radius: 5px;
+}
+.proj-card a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+#contact {
+  color: white;
+}
+#contact .contact-card {
+  background-color: var(--blue);
+}
+#contact input {
+  width: 100%;
+  margin-top: 3px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: none;
+}
+#contact textarea {
+  width: 100%;
+  border-radius: 5px;
+  padding: 3px 5px;
+  border: none;
+}
+#contact button {
+  background-color: var(--blue);
+  color: white;
+  border: white solid 2px;
+}
+
+.footer-up {
+  background-color: white;
+}
+.footer-up .footer {
+  background-color: var(--blue);
+}
+.footer-up .footer a {
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=index.css.map */

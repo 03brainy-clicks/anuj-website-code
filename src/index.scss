@@ -1,0 +1,298 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+$bg-url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC";
+$bg-width: 50px;
+$bg-height: 50px;
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+/* Main styles */
+body {
+  /* img size is 50x50 */
+  background: url($bg-url) repeat 0 0;
+
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite; /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite; /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite; /* Opera 12+ */
+  animation: bg-scrolling-reverse 1s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+
+  &::before {
+    font-size: 8rem;
+    font-weight: 100;
+    font-style: normal;
+  }
+}
+
+// global
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #6155d7;
+  --back-blue: #2a337fd2;
+  --black: #0a0a0b;
+  --grey: #55565a;
+  --white: #fff;
+}
+
+.color-grey {
+  color: var(--grey);
+}
+.color-blue {
+  color: var(--blue);
+}
+.color-white {
+  color: white;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+.red {
+  border: solid 1px red;
+}
+
+.section-heading {
+  padding: 0px 0px 7px;
+  border-bottom: solid 0.2rem var(--white);
+}
+// typed js
+.typed-cursor {
+  opacity: 1;
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+  animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink {
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes typedjsBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.typed-fade-out {
+  opacity: 0;
+  transition: opacity 0.25s;
+  -webkit-animation: 0;
+  animation: 0;
+}
+
+//navigation bar
+
+nav {
+  z-index: 100;
+}
+.navigation {
+  h5 {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(208, 208, 208);
+  }
+
+  .navbar-back {
+    background-color: var(--blue);
+  }
+}
+
+// hero section
+.hero-section {
+  .hero {
+    width: 100%;
+    // height: 100vh;
+  }
+  .hero-text {
+    font-size: 2rem;
+  }
+  .hero-image {
+    img {
+      width: 100%;
+    }
+  }
+
+  .resume-button {
+    background-color: var(--blue);
+    color: white;
+  }
+}
+
+//about
+
+.about-me {
+  background-color: var(--blue);
+  color: white;
+
+  .row {
+    height: 100%;
+  }
+  .about-back {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+  }
+}
+
+// education
+
+#education {
+  background-color: rgba(255, 255, 255, 0.636);
+}
+
+// project
+
+#project {
+  background-color: var(--blue);
+  h2 {
+    color: white;
+  }
+
+  .carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+  }
+
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.proj-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: black;
+
+  img {
+    border-radius: 5px;
+  }
+
+  a {
+    color: var(--blue);
+
+    text-decoration: none;
+  }
+}
+
+// contact
+#contact {
+  color: white;
+  .contact-card {
+    background-color: var(--blue);
+  }
+
+  input {
+    width: 100%;
+    margin-top: 3px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: none;
+  }
+  textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 3px 5px;
+    border: none;
+  }
+
+  button {
+    background-color: var(--blue);
+    color: white;
+    border: white solid 2px;
+  }
+}
+
+// footer
+
+.footer-up {
+  background-color: white;
+  .footer {
+    background-color: var(--blue);
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
